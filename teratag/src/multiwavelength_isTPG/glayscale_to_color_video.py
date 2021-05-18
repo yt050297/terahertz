@@ -69,6 +69,8 @@ for i, file in enumerate(file_list):
                 apply_color_map_image = cv2.applyColorMap(frame, colormap_table[colormap_table_count % len(colormap_table)][1])
                 #convert_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 #resized_img = cv2.resize(apply_color_map_image, (width // 4, height // 4))
+
+                #動画の表示
                 cv2.imshow('image',apply_color_map_image)
 
             elif image_color == 'GRAY':
