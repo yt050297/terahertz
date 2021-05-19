@@ -23,9 +23,9 @@ colormap_table = [
 ]
 
 #動画のディレクトリ指定
-dir_path = 'C:/Users/kawaselab/Desktop/grayscale_video/*.mp4'
+dir_path = 'C:/Users/yt050/Desktop/grayscale_video/*.mp4'
 #保存するディレクトリを指定
-save_path = 'C:/Users/kawaselab/Desktop/grayscale_video/converted_to_color_video'
+save_path = 'C:/Users/yt050/Desktop/grayscale_video/converted_to_color_video'
 os.makedirs(save_path, exist_ok=True)
 file_list = glob.glob(dir_path)
 
