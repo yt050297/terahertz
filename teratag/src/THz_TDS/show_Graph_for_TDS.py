@@ -56,17 +56,17 @@ def trans_log(df_trans_log,title,save_path,i):
     plt.close()
 
 #ファイル指定
-dir = 'C:/Users/TeraHertz/PycharmProjects/untitled/20210212/shatihata_gomu_hakarinaosi'
+dir = 'C:/Users/yt050/PycharmProjects/20210519/trans'
 ref = dir + '/' + 'ref.txt'
 save_path = dir + '/' + 'graph'
 #保存先ディレクトリがないなら作る
 os.makedirs(save_path, exist_ok=True)
-first = 2
-last = 2
+first = 25
+last = 25
 
 for i in range(first,last+1):
-    file = dir + '/' + 'THz{}.txt'.format(i)
-    title = '試験番号：THz-{}'.format(i)
+    file = dir + '/' + 'B52-{}.txt'.format(i)
+    title = '試験番号：B52-{}'.format(i)
 
     #ファイル読み込み
     df = pd.read_table(file, engine='python',
@@ -99,4 +99,4 @@ for i in range(first,last+1):
     #関数の実行
     #intensity(df)
     #transmittance(df_trans)
-    trans_log(df_trans_log,title,save_path,2)
+    trans_log(df_trans_log,title,save_path,i)
