@@ -20,6 +20,7 @@ def main():
     spd_max = 20000  # 最大速度[PPS]
     acceleration_time = 1000  # 加減速時間[mS]
     sec=0.2
+    save_path = 'C:/Users/yt050/Desktop/saveimaging'
 
     X = np.zeros((height_pixel, side_pixel))
 
@@ -55,8 +56,13 @@ def main():
     print(i, j)
     fig = plt.figure(figsize=(5, 5))
     plt.imshow(X, cmap='bwr')
-    plt.title("Plot 2D array")
+    plt.title("Plot 2D array", fontsize=16)
+    plt.xlabel('sample width [pixel]', fontsize=16)
+    plt.ylabel('sample height [pixel]', fontsize=16)
+    # plt.colorbar()
+    plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
     plt.show()
+
 
     for i in range(height_pixel):
         for j in range(1,side_pixel):
@@ -76,10 +82,13 @@ def main():
             #list.append(polarizer._get_position())
             # print(list)
             # print(len(list))   #全ピクセル数＋１になっている
-
             fig = plt.figure(figsize=(5, 5))
             plt.imshow(X, cmap='bwr')
-            plt.title("Plot 2D array")
+            plt.title("Plot 2D array", fontsize=16)
+            plt.xlabel('sample width [pixel]', fontsize=16)
+            plt.ylabel('sample height [pixel]', fontsize=16)
+            # plt.colorbar()
+            plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
             plt.show()
 
         polarizer._set_position_relative(2, -height_resolution)
@@ -100,10 +109,12 @@ def main():
             print(i+1, side_pixel-1-j)
         fig = plt.figure(figsize=(5, 5))
         plt.imshow(X, cmap='bwr')
-        plt.title("Plot 2D array")
-        plt.colorbar()
+        plt.title("Plot 2D array",fontsize=16)
+        plt.xlabel('sample width [pixel]', fontsize=16)
+        plt.ylabel('sample height [pixel]', fontsize=16)
+        #plt.colorbar()
+        plt.savefig(save_path + '/{}_{}.jpg'.format(i,j))
         plt.show()
-        plt.savefig('C:/Users/yt050/Desktop/saveimaging/{}_{}.jpg'.format(i,j))
 
     time.sleep(1)
     polarizer.stop()
