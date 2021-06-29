@@ -10,8 +10,8 @@ def main():
     print('ok')
     port = 'COM3'
     list = []
-    side_pixel = 20
-    height_pixel = 20
+    side_pixel = 5
+    height_pixel = 5
     side_stage=-10000   ###4um/pulse
     height_stage=-10000   ###1um/pulse
     side_resolution = 250
