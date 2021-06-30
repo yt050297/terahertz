@@ -12,12 +12,14 @@ import time
 import numpy as np
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import matplotlib as mpl
+
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import tkinter as tk
 import os
 from datetime import datetime as dt
 import glob
+
 
 class ShowInfraredCamera():
     def __init__(self):
@@ -404,7 +406,7 @@ class ShowInfraredCamera():
         #######ここからステージ####################################################################
         print('ok')
         port = 'COM3'
-        side_stage = 50000    ###2um/pulse
+        side_stage = 50000  ###2um/pulse
         height_stage = 0  ###2um/pulse
         # side_pixel = 45
         # height_pixel = 45
@@ -417,12 +419,12 @@ class ShowInfraredCamera():
         spd_min = 19000  # 最小速度[PPS]
         spd_max = 20000  # 最大速度[PPS]
         acceleration_time = 1000  # 加減速時間[mS]
-        sec = 1
+        sec = 0.5
         image_sec = 300
-        save_path = 'C:/Users/yt050/Desktop/saveimaging/first_try'
+        save_path = 'C:/Users/yt050/Desktop/saveimaging/second_try'
 
         Y = np.zeros((height_pixel, side_pixel))
-        #print(Y)
+        # print(Y)
         polarizer = AutoPolarizer(port=port)
 
         print('setting_time')
@@ -483,8 +485,8 @@ class ShowInfraredCamera():
         y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
         Y[i][j] = y
         print(i, j)
-        print('予測結果{}'.format(y))
-        fig = plt.figure(figsize=(5, 5))
+        print('予測結果:{}'.format(y))
+        fig = plt.figure(figsize=(8, 8))
         ax = fig.add_subplot()
         ax.imshow(Y, cmap='bwr')
         plt.imshow(Y, cmap='bwr')
@@ -492,7 +494,7 @@ class ShowInfraredCamera():
         plt.xlabel('sample width [pixel]', fontsize=16)
         plt.ylabel('sample height [pixel]', fontsize=16)
         # plt.colorbar()
-        plt.savefig(save_path + '/1/{}_{}.jpg'.format(i, j))
+        plt.savefig(save_path + '/{0}{1}.jpg'.format(i, j))
         # plt.show()
 
         root = tk.Tk()
@@ -542,6 +544,27 @@ class ShowInfraredCamera():
                     print(i, j)
                     print('予測結果{}'.format(y))
 
+                    fig = plt.figure(figsize=(8, 8))
+                    ax = fig.add_subplot()
+                    ax.imshow(Y, cmap='bwr')
+                    plt.imshow(Y, cmap='bwr')
+                    plt.title("Identification Imaging Result", fontsize=16)
+                    plt.xlabel('sample width [pixel]', fontsize=16)
+                    plt.ylabel('sample height [pixel]', fontsize=16)
+                    # plt.colorbar()
+                    plt.savefig(save_path + '/{0}{1}.jpg'.format(i, j))
+                    # plt.show()
+
+                    root = tk.Tk()
+                    root.withdraw()
+                    canvas = FigureCanvasTkAgg(fig, master=root)
+                    canvas.draw()
+                    canvas.get_tk_widget().pack()
+                    root.update()
+                    root.deiconify()
+                    root.after(image_sec, lambda: root.destroy())
+                    root.mainloop()
+
                 else:
                     polarizer._set_position_relative(1, side_resolution)  # 引数一つ目、1:一軸、2:2軸、W:両軸
                     time.sleep(sec)
@@ -573,36 +596,30 @@ class ShowInfraredCamera():
                     pre = model.predict(X)
 
                     y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
-                    Y[i][side_pixel-1-j] = y
-                    print(i, side_pixel-1-j)
-                    print('予測結果{}'.format(y))
+                    Y[i][side_pixel - 1 - j] = y
+                    print(i, side_pixel - 1 - j)
+                    print('予測結果:{}'.format(y))
 
-                # #     # 疑似カラーを付与
-                # apply_color_map_image = cv2.applyColorMap(frame, self.colormap_table[
-                #     self.colormap_table_count % len(self.colormap_table)][1])
-                # cv2.imshow("Please push Q button when you want to close the window.",
-                #            cv2.resize(apply_color_map_image, (800, 800)))
+                    fig = plt.figure(figsize=(8, 8))
+                    ax = fig.add_subplot()
+                    ax.imshow(Y, cmap='bwr')
+                    plt.imshow(Y, cmap='bwr')
+                    plt.title("Identification Imaging Result", fontsize=16)
+                    plt.xlabel('sample width [pixel]', fontsize=16)
+                    plt.ylabel('sample height [pixel]', fontsize=16)
+                    # plt.colorbar()
+                    plt.savefig(save_path + '/{0}{1}.jpg'.format(i, side_pixel - 1 - j))
+                    # plt.show()
 
-                fig = plt.figure(figsize=(5, 5))
-                ax = fig.add_subplot()
-                ax.imshow(Y, cmap='bwr')
-                plt.imshow(Y, cmap='bwr')
-                plt.title("Identification Imaging Result", fontsize=16)
-                plt.xlabel('sample width [pixel]', fontsize=16)
-                plt.ylabel('sample height [pixel]', fontsize=16)
-                # plt.colorbar()
-                plt.savefig(save_path + '/2/{}_{}.jpg'.format(i, j))
-                # plt.show()
-
-                root = tk.Tk()
-                root.withdraw()
-                canvas = FigureCanvasTkAgg(fig, master=root)
-                canvas.draw()
-                canvas.get_tk_widget().pack()
-                root.update()
-                root.deiconify()
-                root.after(image_sec, lambda: root.destroy())
-                root.mainloop()
+                    root = tk.Tk()
+                    root.withdraw()
+                    canvas = FigureCanvasTkAgg(fig, master=root)
+                    canvas.draw()
+                    canvas.get_tk_widget().pack()
+                    root.update()
+                    root.deiconify()
+                    root.after(image_sec, lambda: root.destroy())
+                    root.mainloop()
 
             polarizer._set_position_relative(2, height_resolution)
             time.sleep(sec)
@@ -641,9 +658,30 @@ class ShowInfraredCamera():
                 pre = model.predict(X)
 
                 y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
-                Y[i+1][j] = y
-                print(i+1, j)
-                print('予測結果{}'.format(y))
+                Y[i + 1][j] = y
+                print(i + 1, j)
+                print('予測結果:{}'.format(y))
+
+                fig = plt.figure(figsize=(8, 8))
+                ax = fig.add_subplot()
+                ax.imshow(Y, cmap='bwr')
+                plt.imshow(Y, cmap='bwr')
+                plt.title("Identification Imaging Result", fontsize=16)
+                plt.xlabel('sample width [pixel]', fontsize=16)
+                plt.ylabel('sample height [pixel]', fontsize=16)
+                # plt.colorbar()
+                plt.savefig(save_path + '/{0}{1}.jpg'.format(i + 1, j))
+                # plt.show()
+
+                root = tk.Tk()
+                root.withdraw()
+                canvas = FigureCanvasTkAgg(fig, master=root)
+                canvas.draw()
+                canvas.get_tk_widget().pack()
+                root.update()
+                root.deiconify()
+                root.after(image_sec, lambda: root.destroy())
+                root.mainloop()
 
             else:
                 if trigger == "software":
@@ -674,40 +712,33 @@ class ShowInfraredCamera():
                 pre = model.predict(X)
 
                 y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
-                Y[i+1][side_pixel-1-j] = y
-                print(i+1, side_pixel-1-j)
-                print('予測結果{}'.format(y))
+                Y[i + 1][side_pixel - 1 - j] = y
+                print(i + 1, side_pixel - 1 - j)
+                print('予測結果:{}'.format(y))
 
-            # #     # 疑似カラーを付与
-            # apply_color_map_image = cv2.applyColorMap(frame, self.colormap_table[
-            #     self.colormap_table_count % len(self.colormap_table)][1])
-            # cv2.imshow("Please push Q button when you want to close the window.",
-            #            cv2.resize(apply_color_map_image, (800, 800)))
+                fig = plt.figure(figsize=(8, 8))
+                ax = fig.add_subplot()
+                ax.imshow(Y, cmap='bwr')
+                plt.imshow(Y, cmap='bwr')
+                plt.title("Identification Imaging Result", fontsize=16)
+                plt.xlabel('sample width [pixel]', fontsize=16)
+                plt.ylabel('sample height [pixel]', fontsize=16)
+                # plt.colorbar()
+                plt.savefig(save_path + '/{0}{1}.jpg'.format(i + 1, side_pixel - 1 - j))
+                # plt.show()
 
-            fig = plt.figure(figsize=(5, 5))
-            ax = fig.add_subplot()
-            ax.imshow(Y, cmap='bwr')
-            plt.imshow(Y, cmap='bwr')
-            plt.title("Identification Imaging Result", fontsize=16)
-            plt.xlabel('sample width [pixel]', fontsize=16)
-            plt.ylabel('sample height [pixel]', fontsize=16)
-            # plt.colorbar()
-            plt.savefig(save_path + '/3/{}_{}.jpg'.format(i, j))
-            # plt.show()
-
-            root = tk.Tk()
-            root.withdraw()
-            canvas = FigureCanvasTkAgg(fig, master=root)
-            canvas.draw()
-            canvas.get_tk_widget().pack()
-            root.update()
-            root.deiconify()
-            root.after(image_sec, lambda: root.destroy())
-            root.mainloop()
+                root = tk.Tk()
+                root.withdraw()
+                canvas = FigureCanvasTkAgg(fig, master=root)
+                canvas.draw()
+                canvas.get_tk_widget().pack()
+                root.update()
+                root.deiconify()
+                root.after(image_sec, lambda: root.destroy())
+                root.mainloop()
 
         time.sleep(1)
         polarizer.stop()
-
 
         # while True:
         #     # 処理前の時刻
