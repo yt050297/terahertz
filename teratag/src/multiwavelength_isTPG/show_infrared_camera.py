@@ -404,18 +404,22 @@ class ShowInfraredCamera():
         #######ここからステージ####################################################################
         print('ok')
         port = 'COM3'
-        side_pixel = 5
-        height_pixel = 5
-        side_stage = -10000    ###4um/pulse
-        height_stage = -10000  ###1um/pulse
-        side_resolution = 250
-        height_resolution = 1000
+        side_stage = 50000    ###2um/pulse
+        height_stage = 0  ###2um/pulse
+        # side_pixel = 45
+        # height_pixel = 45
+        side_pixel = 22
+        height_pixel = 22
+        side_resolution = 2000
+        height_resolution = 2000
+        # side_resolution = 500
+        # height_resolution = 500
         spd_min = 19000  # 最小速度[PPS]
         spd_max = 20000  # 最大速度[PPS]
         acceleration_time = 1000  # 加減速時間[mS]
-        sec = 0.2
+        sec = 1
         image_sec = 300
-        save_path = 'C:/Users/yt050/Desktop/saveimaging'
+        save_path = 'C:/Users/yt050/Desktop/saveimaging/first_try'
 
         Y = np.zeros((height_pixel, side_pixel))
         #print(Y)
@@ -427,18 +431,18 @@ class ShowInfraredCamera():
 
         print("Reset")
         polarizer.reset()
-        time.sleep(8)
+        time.sleep(15)
         print('初期位置設定')
         polarizer._set_position_relative(1, side_stage)
-        time.sleep(6)
+        time.sleep(12)
         polarizer._set_position_relative(2, height_stage)
-        time.sleep(6)
+        time.sleep(5)
         # print(polarizer._get_position())
         # list.append(polarizer._get_position())
         # print(list)
 
         ##shoki
-        polarizer._set_position_relative(2, -height_resolution)
+        polarizer._set_position_relative(2, height_resolution)
         time.sleep(sec)
         # print(polarizer._get_position())
         # list.append(polarizer._get_position())
@@ -449,6 +453,7 @@ class ShowInfraredCamera():
             self.cam_manager.execute_software_trigger()
 
         frame = self.cam_manager.get_next_image()
+        print(frame)
         # if frame is None:
         #     continue
 
@@ -462,6 +467,9 @@ class ShowInfraredCamera():
             frame = cv2.flip(frame, 1)  # 画像を左右反転
 
         resize_image = cv2.resize(frame, (im_size_width, im_size_height))
+        # #     # 疑似カラーを付与
+        # apply_color_map_image = cv2.applyColorMap(frame, self.colormap_table[self.colormap_table_count % len(self.colormap_table)][1])
+        # cv2.imshow("Please push Q button when you want to close the window.",cv2.resize(apply_color_map_image, (800, 800)))
 
         X = []
         X.append(resize_image)
@@ -475,6 +483,7 @@ class ShowInfraredCamera():
         y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
         Y[i][j] = y
         print(i, j)
+        print('予測結果{}'.format(y))
         fig = plt.figure(figsize=(5, 5))
         ax = fig.add_subplot()
         ax.imshow(Y, cmap='bwr')
@@ -483,7 +492,7 @@ class ShowInfraredCamera():
         plt.xlabel('sample width [pixel]', fontsize=16)
         plt.ylabel('sample height [pixel]', fontsize=16)
         # plt.colorbar()
-        plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
+        plt.savefig(save_path + '/1/{}_{}.jpg'.format(i, j))
         # plt.show()
 
         root = tk.Tk()
@@ -531,6 +540,7 @@ class ShowInfraredCamera():
                     y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
                     Y[i][j] = y
                     print(i, j)
+                    print('予測結果{}'.format(y))
 
                 else:
                     polarizer._set_position_relative(1, side_resolution)  # 引数一つ目、1:一軸、2:2軸、W:両軸
@@ -565,6 +575,13 @@ class ShowInfraredCamera():
                     y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
                     Y[i][side_pixel-1-j] = y
                     print(i, side_pixel-1-j)
+                    print('予測結果{}'.format(y))
+
+                # #     # 疑似カラーを付与
+                # apply_color_map_image = cv2.applyColorMap(frame, self.colormap_table[
+                #     self.colormap_table_count % len(self.colormap_table)][1])
+                # cv2.imshow("Please push Q button when you want to close the window.",
+                #            cv2.resize(apply_color_map_image, (800, 800)))
 
                 fig = plt.figure(figsize=(5, 5))
                 ax = fig.add_subplot()
@@ -574,7 +591,7 @@ class ShowInfraredCamera():
                 plt.xlabel('sample width [pixel]', fontsize=16)
                 plt.ylabel('sample height [pixel]', fontsize=16)
                 # plt.colorbar()
-                plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
+                plt.savefig(save_path + '/2/{}_{}.jpg'.format(i, j))
                 # plt.show()
 
                 root = tk.Tk()
@@ -587,7 +604,7 @@ class ShowInfraredCamera():
                 root.after(image_sec, lambda: root.destroy())
                 root.mainloop()
 
-            polarizer._set_position_relative(2, -height_resolution)
+            polarizer._set_position_relative(2, height_resolution)
             time.sleep(sec)
             # print(polarizer._get_position())
             # list.append(polarizer._get_position())
@@ -626,6 +643,7 @@ class ShowInfraredCamera():
                 y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
                 Y[i+1][j] = y
                 print(i+1, j)
+                print('予測結果{}'.format(y))
 
             else:
                 if trigger == "software":
@@ -658,6 +676,13 @@ class ShowInfraredCamera():
                 y = pre.argmax()  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
                 Y[i+1][side_pixel-1-j] = y
                 print(i+1, side_pixel-1-j)
+                print('予測結果{}'.format(y))
+
+            # #     # 疑似カラーを付与
+            # apply_color_map_image = cv2.applyColorMap(frame, self.colormap_table[
+            #     self.colormap_table_count % len(self.colormap_table)][1])
+            # cv2.imshow("Please push Q button when you want to close the window.",
+            #            cv2.resize(apply_color_map_image, (800, 800)))
 
             fig = plt.figure(figsize=(5, 5))
             ax = fig.add_subplot()
@@ -667,7 +692,7 @@ class ShowInfraredCamera():
             plt.xlabel('sample width [pixel]', fontsize=16)
             plt.ylabel('sample height [pixel]', fontsize=16)
             # plt.colorbar()
-            plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
+            plt.savefig(save_path + '/3/{}_{}.jpg'.format(i, j))
             # plt.show()
 
             root = tk.Tk()

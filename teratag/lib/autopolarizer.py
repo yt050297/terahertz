@@ -70,7 +70,7 @@ class AutoPolarizer:
         """
         機械原点復帰命令を送信します．
         """
-        ret = self.raw_command("H:W++")
+        ret = self.raw_command("H:W--")
         # if self.is_sleep_until_stop:
         #     self.sleep_until_stop()
         return ret

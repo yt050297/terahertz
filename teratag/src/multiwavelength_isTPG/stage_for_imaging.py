@@ -10,8 +10,8 @@ def main():
     print('ok')
     port = 'COM3'
     list = []
-    side_pixel = 5
-    height_pixel = 5
+    side_pixel = 7
+    height_pixel = 7
     #print(port)
 
     polarizer = AutoPolarizer(port = port)

@@ -9,17 +9,16 @@ import matplotlib.pyplot as plt
 def main():
     print('ok')
     port = 'COM3'
-    list = []
-    side_pixel = 5
-    height_pixel = 5
-    side_stage=-10000   ###4um/pulse
-    height_stage=-10000   ###1um/pulse
-    side_resolution = 250
-    height_resolution = 1000
+    side_pixel = 22
+    height_pixel = 22
+    side_stage= 20000 +30000  ###4um/pulse
+    height_stage= 0 ###1um/pulse
+    side_resolution = 2000
+    height_resolution = 2000
     spd_min = 19000  # 最小速度[PPS]
     spd_max = 20000  # 最大速度[PPS]
     acceleration_time = 1000  # 加減速時間[mS]
-    sec=0.2
+    sec=1
     save_path = 'C:/Users/yt050/Desktop/saveimaging'
 
     X = np.zeros((height_pixel, side_pixel))
@@ -32,19 +31,19 @@ def main():
 
     print("Reset")
     polarizer.reset()
-    time.sleep(8)
+    time.sleep(15)
     print('初期位置設定')
     polarizer._set_position_relative(1, side_stage)
-    time.sleep(6)
+    time.sleep(12)
     polarizer._set_position_relative(2, height_stage)
-    time.sleep(6)
+    time.sleep(5)
     #print(polarizer._get_position())
     #list.append(polarizer._get_position())
     #print(list)
 
 
     ##shoki
-    polarizer._set_position_relative(2, -height_resolution)
+    polarizer._set_position_relative(2, height_resolution)
     time.sleep(sec)
     # print(polarizer._get_position())
     #list.append(polarizer._get_position())
@@ -91,7 +90,7 @@ def main():
             plt.savefig(save_path + '/{}_{}.jpg'.format(i, j))
             plt.show()
 
-        polarizer._set_position_relative(2, -height_resolution)
+        polarizer._set_position_relative(2, height_resolution)
         time.sleep(sec)
         # print(polarizer._get_position())
         #list.append(polarizer._get_position())
