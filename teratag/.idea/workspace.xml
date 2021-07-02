@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="fixed camera_manager">
-      <change afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" afterDir="false" />
+    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="fixed show_infrared_camera">
+      <change afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/teratag.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/teratag.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/usb.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,36 +37,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Allread.py">
+        <entry file="file://$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+            <state relative-caret-position="-6000">
+              <caret line="443" column="15" lean-forward="true" selection-start-line="443" selection-start-column="15" selection-end-line="443" selection-end-column="15" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py">
+        <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5516">
-              <caret line="898" selection-start-line="898" selection-end-line="898" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="696" column="24" lean-forward="true" selection-end-line="897" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,16 +101,16 @@
         <option value="$PROJECT_DIR$/main_transmittance_reflectance.py" />
         <option value="$PROJECT_DIR$/lib/Allread.py" />
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/camera_manager.py" />
-        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" />
-        <option value="$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py" />
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py" />
+        <option value="$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py" />
+        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" />
+        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -127,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,14 +152,19 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="preferences.updates" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -188,7 +185,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_transmittance_reflectance">
+  <component name="RunManager" selected="Python.tag_imaging_try">
+    <configuration name="imaging_to_video" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="teratag" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\yt050\PycharmProjects\nagoya_univ\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main_Time_intensity" type="PythonConfigurationType" factoryName="Python">
       <module name="teratag" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,13 +274,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="tag_imaging_try" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="teratag" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\yt050\PycharmProjects\nagoya_univ\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main_Time_intensity" />
       <item itemvalue="Python.main_transmittance_reflectance" />
       <item itemvalue="Python.main_transmittance_reflectance_is_TPG" />
+      <item itemvalue="Python.imaging_to_video" />
+      <item itemvalue="Python.tag_imaging_try" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.tag_imaging_try" />
+        <item itemvalue="Python.imaging_to_video" />
         <item itemvalue="Python.main_transmittance_reflectance" />
         <item itemvalue="Python.main_transmittance_reflectance_is_TPG" />
       </list>
@@ -281,7 +326,8 @@
       <workItem from="1549698253445" duration="10097000" />
       <workItem from="1550025551506" duration="607000" />
       <workItem from="1625038808314" duration="161000" />
-      <workItem from="1625039281413" duration="2654000" />
+      <workItem from="1625039281413" duration="11016000" />
+      <workItem from="1625213584545" duration="5472000" />
     </task>
     <task id="LOCAL-00001" summary="add graph_everymm">
       <created>1549426136049</created>
@@ -311,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625038937837</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fixed show_infrared_camera">
+      <created>1625042076124</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1625042076124</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22462000" />
+    <option name="totallyTimeSpent" value="36296000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -327,22 +380,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.041493777" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.3679115" />
       <window_info id="Structure" order="1" weight="0.25751072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48855507" visible="true" weight="0.24039653" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48855507" visible="true" weight="0.23762377" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.3283582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329602" />
-      <window_info anchor="bottom" x="0" y="303" width="1440" height="240" id="Event Log" order="9" sideWeight="0.5114449" side_tool="true" visible="true" weight="0.27181688" />
+      <window_info anchor="bottom" x="0" y="303" width="1440" height="240" id="Event Log" order="9" sideWeight="0.5131397" side_tool="true" weight="0.24034335" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4985694" weight="0.32961586" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49722221" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -362,7 +415,8 @@
     <MESSAGE value="fix graph_everymm_is-TPG" />
     <MESSAGE value="update graph_Time_intensity_everymm and min_max_normalization_TDS and fix main_Time_intensity and main_transmittance_reflectance" />
     <MESSAGE value="fixed camera_manager" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed camera_manager" />
+    <MESSAGE value="fixed show_infrared_camera" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed show_infrared_camera" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -374,6 +428,10 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/teratag$imaging_to_video.coverage" NAME="imaging_to_video Coverage Results" MODIFIED="1625056246674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+    <SUITE FILE_PATH="coverage/teratag$tag_imaging_try.coverage" NAME="tag_imaging_try Coverage Results" MODIFIED="1625219088266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/machine_learning/classification.py">
@@ -399,16 +457,6 @@
     <entry file="file://$PROJECT_DIR$/main_Time_intensity.py" />
     <entry file="file://$PROJECT_DIR$/main_transmittance_reflectance.py" />
     <entry file="file://$PROJECT_DIR$/main_transmittance_reflectance_is_TPG.py" />
-    <entry file="file://$PROJECT_DIR$/lib/Allread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/camera_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -430,23 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="8" lean-forward="true" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/camera_manager.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -454,22 +485,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py">
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="696" column="24" lean-forward="true" selection-end-line="897" />
+        <state relative-caret-position="3120">
+          <caret line="898" selection-start-line="898" selection-end-line="898" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/show_infrared_camera.py">
+    <entry file="file://$USER_HOME$/Desktop/saveimaging/predict_imaging/image_to_video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5516">
-          <caret line="898" selection-start-line="898" selection-end-line="898" />
+        <state relative-caret-position="105">
+          <caret line="7" column="57" lean-forward="true" selection-end-line="31" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Allread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/usb.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/move_to_shokiiti.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/test.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/test2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/test3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_for_imaging.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_both_try.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_ver2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Real_time_identification_1.4.2_for_imaging/module/show_infrared_camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6000">
+          <caret line="443" column="15" lean-forward="true" selection-start-line="443" selection-start-column="15" selection-end-line="443" selection-end-column="15" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
