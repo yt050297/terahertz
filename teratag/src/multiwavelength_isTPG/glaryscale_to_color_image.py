@@ -5,9 +5,9 @@ import os
 import glob
 
 #画像のディレクトリ指定
-dir_path = 'C:/Users/yt050/Desktop/grayscale_pic/*.png'
+dir_path = 'C:/Users/yt050/Desktop/tag_time_scare/h/*.png'
 #保存するディレクトリを指定
-save_path = 'C:/Users/yt050/Desktop/grayscale_pic/converted_to_color_image'
+save_path = 'C:/Users/yt050/Desktop/tag_time_scare/h/converted_to_color_image'
 os.makedirs(save_path, exist_ok=True)
 
 
