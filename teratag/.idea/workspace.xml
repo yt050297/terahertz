@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="fixed image remake">
-      <change afterPath="$PROJECT_DIR$/src/tkinter/.idea/tkinter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tkinter/game.py" afterDir="false" />
+    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="added scanner gui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/Allread_scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Allread_scanner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/autopolarizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/autopolarizer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Scanner/import_csv_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scanner/import_csv_file.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,56 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Scanner/scanner_gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3045">
-              <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/Allread_scanner.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1365">
-              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/module/show_infrared_camera.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1980">
-              <caret line="146" column="39" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Scanner/import_csv_file.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/gui_realtimebeam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1830">
-              <caret line="134" column="39" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+            <state relative-caret-position="300">
+              <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -420,7 +363,7 @@
       <workItem from="1634188587339" duration="1236000" />
       <workItem from="1637823433536" duration="70000" />
       <workItem from="1643610655897" duration="6620000" />
-      <workItem from="1643691154197" duration="256000" />
+      <workItem from="1643691154197" duration="535000" />
     </task>
     <task id="LOCAL-00001" summary="add graph_everymm">
       <created>1549426136049</created>
@@ -485,11 +428,18 @@
       <option name="project" value="LOCAL" />
       <updated>1631860490762</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added scanner gui">
+      <created>1643691542004</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643691542004</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90813000" />
+    <option name="totallyTimeSpent" value="91092000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -504,7 +454,7 @@
     <frame x="-7" y="-7" width="782" height="838" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.23391421" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4820442" />
       <window_info id="Structure" order="1" weight="0.25751072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -565,7 +515,8 @@
     <MESSAGE value="stage and imaging fast edition" />
     <MESSAGE value="fixed imaging program with opencv" />
     <MESSAGE value="fixed image remake" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed image remake" />
+    <MESSAGE value="added scanner gui" />
+    <option name="LAST_COMMIT_MESSAGE" value="added scanner gui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -833,16 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/module/show_infrared_camera.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1980">
-          <caret line="146" column="39" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner/import_csv_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1125">
@@ -873,10 +814,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/module/show_infrared_camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="146" column="39" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner/scanner_gui.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3045">
-          <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+        <state relative-caret-position="300">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
