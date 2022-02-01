@@ -79,9 +79,9 @@ image2_2 = cv2.warpAffine(image2,M,(width2,height2))
 
 im_v =cv2.vconcat([image1,image2_2])
 cv2.imshow('sample1',im_v)
-cv2.waitKey(1000)
+cv2.waitKey(500)
 
 #保存先ディレクトリがないなら作る
 os.makedirs(save_path, exist_ok=True)
 #保存
-cv2.imwrite(save_path + '/THz-{}_tate.png'.format(i), im_v)
+cv2.imwrite(save_path + '/sample_{}.png'.format(i), im_v)

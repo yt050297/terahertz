@@ -45,8 +45,8 @@ def trans_log(df_trans_log,title,save_path,i):
     plt.xlim(0.1,2.0)
     plt.ylim(-80,0)
     #plt.yscale('log')
-    x_axis = 'Frequency[THz]'
-    y_axis = '電波吸収[dB]'
+    x_axis = 'Frequency [THz]'
+    y_axis = 'Wave absorption [dB]'
     plt.xlabel(x_axis, fontsize=16)
     plt.ylabel(y_axis, fontsize=16)
     plt.grid()
@@ -56,17 +56,18 @@ def trans_log(df_trans_log,title,save_path,i):
     plt.close()
 
 #ファイル指定
-dir = 'C:/Users/yt050/PycharmProjects/20210519/trans'
-ref = dir + '/' + 'ref.txt'
+dir = r'C:/Users/yt050/PycharmProjects/yamamoto/TDS/torinaosi2'
+
+ref = dir + '/ref/' + 'ref.txt'
 save_path = dir + '/' + 'graph'
 #保存先ディレクトリがないなら作る
 os.makedirs(save_path, exist_ok=True)
-first = 25
-last = 25
+first = 9
+last = 9
 
 for i in range(first,last+1):
-    file = dir + '/' + 'B52-{}.txt'.format(i)
-    title = '試験番号：B52-{}'.format(i)
+    file = dir + '/' + '{}_omote5.txt'.format(i)
+    title = 'No : {}'.format(i)
 
     #ファイル読み込み
     df = pd.read_table(file, engine='python',

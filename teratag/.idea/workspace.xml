@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="fixed imaging program with opencv">
+    <list default="true" id="f37910fe-c2ee-4338-9c51-b49ed820d673" name="Default" comment="fixed image remake">
+      <change afterPath="$PROJECT_DIR$/src/tkinter/.idea/tkinter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tkinter/game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/Allread_scanner.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Allread_scanner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/autopolarizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lib/autopolarizer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Scanner/import_csv_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Scanner/import_csv_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,13 +40,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Scanner/scanner_gui.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="93" selection-start-line="56" selection-start-column="93" selection-end-line="56" selection-end-column="93" />
+            <state relative-caret-position="3045">
+              <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +55,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/Allread_scanner.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="1365">
+              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -58,21 +65,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/__init__.py">
+        <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/module/show_infrared_camera.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+            <state relative-caret-position="1980">
+              <caret line="146" column="39" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Scanner/import_csv_file.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="57" selection-start-line="57" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="1125">
+              <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/gui_realtimebeam.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1830">
+              <caret line="134" column="39" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,17 +150,23 @@
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" />
         <option value="$USER_HOME$/Desktop/Real_time_identification_1.4.1_tag_ver.2/module/show_infrared_camera.py" />
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py" />
-        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_fast.py" />
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_ver2.py" />
         <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/test2.py" />
-        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" />
         <option value="$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.2/module/show_infrared_camera.py" />
         <option value="$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.1_tag_ver.2/module/show_infrared_camera.py" />
+        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_fast.py" />
+        <option value="$PROJECT_DIR$/lib/autopolarizer.py" />
+        <option value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" />
+        <option value="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" />
+        <option value="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" />
+        <option value="$PROJECT_DIR$/src/tkinter/tkinter.py" />
         <option value="$PROJECT_DIR$/src/Scanner/import_csv_file.py" />
+        <option value="$PROJECT_DIR$/src/Scanner/scanner_gui.py" />
+        <option value="$PROJECT_DIR$/lib/Allread_scanner.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="978" />
@@ -150,7 +178,33 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="teratag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teratag" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teratag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teratag" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teratag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teratag" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="teratag" type="b2602c69:ProjectViewProjectNode" />
+              <item name="teratag" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Scanner" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -185,51 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.import_csv_file">
-    <configuration name="imaging_to_video" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="teratag" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\yt050\PycharmProjects\nagoya_univ\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/multiwavelength_isTPG" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="import_csv_file" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="teratag" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Scanner" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Scanner/import_csv_file.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.scanner_gui">
     <configuration name="main_Time_intensity" type="PythonConfigurationType" factoryName="Python">
       <module name="teratag" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -252,7 +262,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="main_transmittance_reflectance" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="make_fre_trans" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="teratag" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,12 +270,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/is_TPG" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_transmittance_reflectance.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/is_TPG/make_fre_trans.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,20 +284,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tag_imaging_try" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="scanner_gui" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="teratag" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\yt050\PycharmProjects\nagoya_univ\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/multiwavelength_isTPG" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/Scanner" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/Scanner/scanner_gui.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -296,7 +306,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="show_Graph_for_TDS" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="teratag" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/THz_TDS" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stage_and_imaging_fast" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="teratag" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,7 +341,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\yt050\PycharmProjects\nagoya_univ\teratag\src\multiwavelength_isTPG\stage_and_imaging_opencv_kannsei.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_fast.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="stage_and_imaging_opencv_kannsei" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="teratag" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -320,19 +374,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.main_Time_intensity" />
-      <item itemvalue="Python.main_transmittance_reflectance" />
-      <item itemvalue="Python.imaging_to_video" />
-      <item itemvalue="Python.tag_imaging_try" />
-      <item itemvalue="Python.test2" />
-      <item itemvalue="Python.import_csv_file" />
+      <item itemvalue="Python.make_fre_trans" />
+      <item itemvalue="Python.show_Graph_for_TDS" />
+      <item itemvalue="Python.stage_and_imaging_fast" />
+      <item itemvalue="Python.stage_and_imaging_opencv_kannsei" />
+      <item itemvalue="Python.scanner_gui" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.import_csv_file" />
-        <item itemvalue="Python.test2" />
-        <item itemvalue="Python.tag_imaging_try" />
-        <item itemvalue="Python.imaging_to_video" />
-        <item itemvalue="Python.main_transmittance_reflectance" />
+        <item itemvalue="Python.scanner_gui" />
+        <item itemvalue="Python.make_fre_trans" />
+        <item itemvalue="Python.show_Graph_for_TDS" />
+        <item itemvalue="Python.stage_and_imaging_opencv_kannsei" />
+        <item itemvalue="Python.stage_and_imaging_fast" />
       </list>
     </recent_temporary>
   </component>
@@ -357,7 +411,16 @@
       <workItem from="1625978958579" duration="4524000" />
       <workItem from="1625996141888" duration="465000" />
       <workItem from="1631682528095" duration="600000" />
-      <workItem from="1631854894347" duration="5336000" />
+      <workItem from="1631854894347" duration="6168000" />
+      <workItem from="1632197492479" duration="4429000" />
+      <workItem from="1632562187921" duration="1059000" />
+      <workItem from="1632799867008" duration="2401000" />
+      <workItem from="1633070583379" duration="5822000" />
+      <workItem from="1633446315653" duration="961000" />
+      <workItem from="1634188587339" duration="1236000" />
+      <workItem from="1637823433536" duration="70000" />
+      <workItem from="1643610655897" duration="6620000" />
+      <workItem from="1643691154197" duration="256000" />
     </task>
     <task id="LOCAL-00001" summary="add graph_everymm">
       <created>1549426136049</created>
@@ -415,11 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1625826313171</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed image remake">
+      <created>1631860490762</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1631860490762</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67127000" />
+    <option name="totallyTimeSpent" value="90813000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -431,16 +501,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="782" height="838" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22050938" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23391421" />
       <window_info id="Structure" order="1" weight="0.25751072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48855507" visible="true" weight="0.23762377" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48855507" weight="0.22630835" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39745402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.3283582" />
@@ -458,18 +528,18 @@
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3660221" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23391421" />
       <window_info id="Structure" order="1" weight="0.25751072" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48855507" visible="true" weight="0.23762377" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39800996" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48855507" visible="true" weight="0.22630835" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39745402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.3283582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32956153" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32531825" />
       <window_info anchor="bottom" x="0" y="303" width="1440" height="240" id="Event Log" order="9" sideWeight="0.5131397" side_tool="true" weight="0.24034335" />
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.4985694" weight="0.32961586" />
       <window_info anchor="bottom" id="Python Console" order="11" sideWeight="0.49722221" weight="0.3283582" />
@@ -477,7 +547,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.20509383" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.3538874" />
       <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
     </layout-to-restore>
@@ -494,7 +564,8 @@
     <MESSAGE value="made_tag_imaging_try python" />
     <MESSAGE value="stage and imaging fast edition" />
     <MESSAGE value="fixed imaging program with opencv" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed imaging program with opencv" />
+    <MESSAGE value="fixed image remake" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed image remake" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -511,29 +582,14 @@
     <SUITE FILE_PATH="coverage/teratag$imaging_to_video.coverage" NAME="imaging_to_video Coverage Results" MODIFIED="1625056246674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
     <SUITE FILE_PATH="coverage/teratag$tag_imaging_try.coverage" NAME="tag_imaging_try Coverage Results" MODIFIED="1625816606251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
     <SUITE FILE_PATH="coverage/teratag$test2.coverage" NAME="test2 Coverage Results" MODIFIED="1625823134979" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
-    <SUITE FILE_PATH="coverage/teratag$import_csv_file.coverage" NAME="import_csv_file Coverage Results" MODIFIED="1631860210141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Scanner" />
+    <SUITE FILE_PATH="coverage/teratag$make_fre_trans.coverage" NAME="make_fre_trans Coverage Results" MODIFIED="1633446709541" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/is_TPG" />
+    <SUITE FILE_PATH="coverage/teratag$stage_and_imaging_fast.coverage" NAME="stage_and_imaging_fast Coverage Results" MODIFIED="1633070791880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+    <SUITE FILE_PATH="coverage/teratag$import_csv_file.coverage" NAME="import_csv_file Coverage Results" MODIFIED="1631860540735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Scanner" />
+    <SUITE FILE_PATH="coverage/teratag$stage_and_imaging_opencv_kannsei.coverage" NAME="stage_and_imaging_opencv_kannsei Coverage Results" MODIFIED="1633076532738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/multiwavelength_isTPG" />
+    <SUITE FILE_PATH="coverage/teratag$show_Graph_for_TDS.coverage" NAME="show_Graph_for_TDS Coverage Results" MODIFIED="1633446585615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/THz_TDS" />
+    <SUITE FILE_PATH="coverage/teratag$scanner_gui.coverage" NAME="scanner_gui Coverage Results" MODIFIED="1643616744306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/Scanner" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/machine_learning/classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/visualization.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_Time_intensity.py" />
     <entry file="file://$PROJECT_DIR$/main_transmittance_reflectance.py" />
     <entry file="file://$PROJECT_DIR$/main_transmittance_reflectance_is_TPG.py" />
@@ -569,36 +625,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/saveimaging/predict_imaging/image_to_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="57" lean-forward="true" selection-end-line="31" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Allread.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" selection-start-line="17" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Desktop/saveimaging/predict_imaging/image_to_video.py" />
     <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/usb.py" />
     <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/glaryscale_to_color_image.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -650,20 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="101" selection-start-line="13" selection-start-column="101" selection-end-line="13" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_fast.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-841">
-          <caret line="15" column="55" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_ver2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -704,6 +717,104 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://E:/import_csv_file.py" />
+    <entry file="file://$PROJECT_DIR$/lib/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/imaging_to_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/test4.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/Pyoptosigma.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="56" column="93" selection-start-line="56" selection-start-column="93" selection-end-line="56" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_fast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2265">
+          <caret line="151" column="9" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/autopolarizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_fast_teiryou/module/show_infrared_camera.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="462" column="21" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/tkinter/tkinter.py" />
+    <entry file="file://$PROJECT_DIR$/src/THz_TDS/show_Graph_for_TDS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Allread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="58" column="9" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/is_TPG/make_fre_trans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/stage_and_imaging_opencv_kannsei.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="52" column="31" lean-forward="true" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner/visuallization_scanner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -713,49 +824,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/__init__.py">
+    <entry file="file://$PROJECT_DIR$/src/Scanner/scanner colorplot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/multiwavelength_isTPG/tag_imaging_try.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="93" selection-start-line="56" selection-start-column="93" selection-end-line="56" selection-end-column="93" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Allread_scanner.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state>
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/import_csv_file.py">
+    <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/module/show_infrared_camera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="46" selection-start-line="46" selection-end-line="86" selection-end-column="3" />
+        <state relative-caret-position="1980">
+          <caret line="146" column="39" selection-start-line="146" selection-start-column="39" selection-end-line="146" selection-end-column="39" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner/import_csv_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="57" selection-start-line="57" selection-end-line="58" selection-end-column="37" />
+        <state relative-caret-position="1125">
+          <caret line="81" column="15" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/Realtime_identification/Real_time_identification_1.4.2_for_imaging_ver.3_gui_fixed/gui_realtimebeam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="134" column="39" selection-start-line="134" selection-start-column="39" selection-end-line="134" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/Allread_scanner.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1365">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scanner/scanner_gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3045">
+          <caret line="224" column="34" selection-start-line="224" selection-start-column="34" selection-end-line="224" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

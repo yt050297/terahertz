@@ -133,7 +133,7 @@ class AutoPolarizer:
         acceleration_time : int
           加減速時間，設定範囲：0～1000（単位：mS）
         """
-        return self.raw_command("D:1S{0}F{1}R{2}".format(spd_min, spd_max, acceleration_time))
+        return self.raw_command("D:2S{0}F{1}R{2}S{0}F{1}R{2}".format(spd_min, spd_max, acceleration_time))
 
     @property
     def degree(self):

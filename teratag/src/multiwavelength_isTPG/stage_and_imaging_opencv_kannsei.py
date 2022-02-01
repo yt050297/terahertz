@@ -29,6 +29,177 @@ def color_append(pre_num, imaging, fromleft, fromupper, pixel_size):
     return imaging
 
 def main():
+    font = cv2.FONT_HERSHEY_PLAIN
+    fontsize = 6
+    samplename_position_x = probability_position_x = 90
+    samplename_position_y = 120
+    probability_position_y = 220
+    x_move = 800
+    font_scale = 5
+
+    ############イメージング表示用
+    fromleft = 10  # 最初のピクセルの左端からの位置
+    fromupper = 10  # 最初のピクセルの上端からの位置
+    background_width = 1440
+    background_height = 1440
+    pixel_size = 20  # 移動距離＆1pixelのサイズ
+
+    #######ここからステージ####################################################################
+    print('ok')
+    port = 'COM3'
+    # 初期位置
+    side_stage = 50000  ###1um/pulse
+    # side_stage = 78000  ##横8cm
+    # side_stage = 70000   #横3列
+    height_stage = 0  ###1um/pulse
+    # ピクセル数
+    side_pixel = 40  ###通常時横5cm
+    # side_pixel = 70   ###横8cm
+    # side_pixel = 58 #横3列
+    height_pixel = 20
+    # height_pixel = 40
+    # 解像度設定
+    side_resolution = 1000
+    height_resolution = 1000
+    side_length = side_resolution * side_pixel
+    #spd_min = 19000  # 最小速度[PPS]
+    spd_min = 8000  # 最小速度[PPS]
+    #spd_max = 20000  # 最大速度[PPS]
+    spd_max = 10000  # 最大速度[PPS]
+    acceleration_time = 1000  # 加減速時間[mS]
+    sec = 0.8
+    ref_time = 0.19
+    ##yoko_sec = 0.35   #通常時
+    yoko_sec = 0.44  # サンプル長い時
+
+    ####イメージングの背景表示
+    imaging = write_backgrand_imaging(background_height, background_width)
+    cv2.imshow('image', imaging)
+
+    # Y = np.zeros((height_pixel, side_pixel))
+
+    polarizer = AutoPolarizer(port=port)
+
+    print('setting_time')
+    polarizer.set_speed(spd_min, spd_max, acceleration_time)
+    time.sleep(2)
+
+    print("Reset")
+    polarizer.reset()
+    time.sleep(25)
+    print('初期位置設定')
+    polarizer._set_position_relative(1, side_stage)
+    time.sleep(25)
+    polarizer._set_position_relative(2, height_stage)
+    time.sleep(5)
+
+    ##shoki
+    polarizer._set_position_relative(2, height_resolution)
+    time.sleep(sec)
+    # i = j = 0
+    n = 0
+    y = 0
+    # Y[i][j] = y
+    # print(i, j)
+    # print(pre)
+    color_append(y, imaging, fromleft, fromupper, pixel_size)
+    cv2.imshow('image', imaging)
+    #save_video(imaging)
+    print(n)
+    # print('予測結果:{}'.format(y))
+    n = n + 1
+
+    for i in range(height_pixel):
+        if i % 2 == 0:
+            polarizer._set_position_relative(1, -side_length)  # 引数一つ目、1:一軸、2:2軸、W:両軸
+            time.sleep(yoko_sec)
+
+            for j in range(1, side_pixel):
+                t1 = time.time()
+                y = 0
+                # Y[i][j] = y
+                # print(i, j)
+                fromleft = fromleft + pixel_size
+                color_append(y, imaging, fromleft, fromupper, pixel_size)
+                cv2.imshow('image', imaging)
+                #save_video(imaging)
+                print(n)
+                # print('予測結果{}'.format(y))
+                n = n + 1
+                t2 = time.time()
+                time1 = t2 - t1
+                time_chousetu = ref_time - time1
+                time.sleep(time_chousetu)
+                t3 = time.time()
+                fps = 1 / (t3 - t1)
+                print(fps)
+
+        else:
+            polarizer._set_position_relative(1, side_length)  # 引数一つ目、1:一軸、2:2軸、W:両軸
+            time.sleep(yoko_sec)
+            # time.sleep(sec)
+            for j in range(1, side_pixel):
+                t1 = time.time()
+
+                y = 1  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
+                # Y[i][side_pixel-1-j] = y
+                # print(i, side_pixel-1-j)
+                fromleft = fromleft - pixel_size
+                color_append(y, imaging, fromleft, fromupper, pixel_size)
+                cv2.imshow('image', imaging)
+                #save_video(imaging)
+                print(n)
+                # print('予測結果:{}'.format(y))
+                n = n + 1
+                t2 = time.time()
+                time1 = t2 - t1
+                time_chousetu = ref_time - time1
+                time.sleep(time_chousetu)
+                t3 = time.time()
+                fps = 1 / (t3 - t1)
+                print(fps)
+
+        time.sleep(sec)
+        polarizer._set_position_relative(2, height_resolution)
+        time.sleep(sec)
+
+        fromupper = fromupper + pixel_size
+
+        if i % 2 == 0:
+            y = 2
+            # Y[i+1][j] = y
+            # print(i+1, j)
+            # fromleft = fromleft + pixel_size
+            color_append(y, imaging, fromleft, fromupper, pixel_size)
+            cv2.imshow('image', imaging)
+            #save_video(imaging)
+            print(n)
+            # print('予測結果:{}'.format(y))
+            n = n + 1
+
+
+        else:
+            y = 3  # preがそれぞれの予測確率で一番高いものを取ってきている。Y_testはone-hotベクトル
+            # Y[i+1][side_pixel-1-j] = y
+            # print(i+1, side_pixel-1-j)
+            # fromleft = fromleft + pixel_size
+            color_append(y, imaging, fromleft, fromupper, pixel_size)
+            cv2.imshow('image', imaging)
+            #save_video(imaging)
+            print(n)
+            # print('予測結果:{}'.format(y))
+            n = n + 1
+
+    time.sleep(1)
+    #self.video_finish()
+    polarizer.stop()
+
+    # cv2.imshow('image',imaging)
+    #self.cam_manager.stop_acquisition()
+    print('Stopped Camera')
+
+
+'''
     side_pixel = 44
     height_pixel = 44
 
@@ -104,8 +275,9 @@ def main():
     cv2.imshow('image', imaging)
 
     for i in range(height_pixel):
+        if i % 2 == 0:
         for j in range(1,side_pixel):
-            if i % 2 == 0:
+            
                 #polarizer._set_position_relative(1, -side_resolution)  # 引数一つ目、1:一軸、2:2軸、W:両軸
                 #time.sleep(sec)
                 a = 1
@@ -153,6 +325,6 @@ def main():
 
     print('completed')
     #cv2.destroyAllWindows()
-
+'''
 if __name__ == "__main__":
     main()
