@@ -5,7 +5,7 @@ from tkinter import messagebox
 import threading
 import tkinter.filedialog as tkfd
 from pathlib import Path
-import pandas as pd
+#import pandas as pd
 import numpy as np
 import os
 import matplotlib as mpl
@@ -15,20 +15,18 @@ import matplotlib.pyplot as plt
 import sys
 from PIL import Image
 import cv2
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
 sys.path.append('../../')
 from lib.Allread_scanner import allread_scanner
 
 class GUI:
     def __init__(self):
-        self.color = 'WHITE'
+        self.color = 'alice blue'
         self.cvv = None
-        #self.create_reference = CreateReference()
-        #self.accumulate_intensity = AccumulateIntensity()
         self.root = tk.Tk()
-        #cwd = os.path.dirname(os.path.abspath(__file__))
-        #self.iconfile = os.path.join(cwd, 'icon/favicon.ico')
-        #self.root.iconbitmap(default=self.iconfile)
+        cwd = os.path.dirname(os.path.abspath(sys.argv[0]))
+        self.iconfile = os.path.join(cwd, 'icon/favicon.ico')
+        self.root.iconbitmap(default=self.iconfile)
         self.nb = ttk.Notebook(width=900, height=300)
         self.tab1 = tk.Frame(self.nb, bg = self.color)
         self.tab2 = tk.Frame(self.nb, bg = self.color)
@@ -41,6 +39,7 @@ class GUI:
         self.image_sec = 3000
         self.normflag = False
         self.save_flag = 0
+        self.titleflag = 0
 
     def getfile(self):
         fileFrame = tk.LabelFrame(self.tab1, bg=self.color, bd=2, relief="ridge", text="ファイルの選択")
@@ -52,27 +51,27 @@ class GUI:
         pictureFrame = tk.LabelFrame(self.tab2, bd=2, bg=self.color, relief="ridge", text="分割画像再構成")
         pictureFrame.pack(anchor=tk.W, pady=5)
 
-        lbl = tk.Label(fileFrame, text='ファイルを選択してください')
+        lbl = tk.Label(fileFrame, bg = self.color, text='ファイルを選択してください')
         lbl.grid(row=0, column=0)
-        lbl = tk.Label(saveFrame, text='保存先を選択してください')
+        lbl = tk.Label(saveFrame, bg = self.color,text='保存先を選択してください')
         lbl.grid(row=0, column=0)
-        lbl = tk.Label(analysisFrame, text='解析方法を選択してください')
+        lbl = tk.Label(analysisFrame, bg = self.color,text='解析方法を選択してください')
         lbl.grid(row=0, column=0)
-        lbl = tk.Label(analysisFrame, text='グラフタイトルを入力してください(ビーム強度，イメージング両方用)')
+        lbl = tk.Label(analysisFrame, bg = self.color, text='グラフタイトルを入力してください(未入力の場合はファイル名がタイトルになります)')
         lbl.grid(row=1, column=0)
-        lbl = tk.Label(analysisFrame, text='イメージング用強度最大値を入力してください')
+        lbl = tk.Label(analysisFrame, bg = self.color, text='イメージング用強度最大値を入力してください')
         lbl.grid(row=2, column=0)
-        lbl = tk.Label(analysisFrame, text='イメージング用強度最小値を入力してください')
+        lbl = tk.Label(analysisFrame, bg = self.color, text='イメージング用強度最小値を入力してください')
         lbl.grid(row=3, column=0)
-        lbl = tk.Label(pictureFrame, text='再構成用の画像を選択してください')
+        lbl = tk.Label(pictureFrame, bg = self.color, text='再構成用の画像を選択してください')
         lbl.grid(row=0, column=0)
-        lbl = tk.Label(pictureFrame, text='画像1')
+        lbl = tk.Label(pictureFrame, bg = self.color, text='画像1')
         lbl.grid(row=1, column=0)
-        lbl = tk.Label(pictureFrame, text='画像2')
+        lbl = tk.Label(pictureFrame, bg = self.color, text='画像2')
         lbl.grid(row=2, column=0)
-        lbl = tk.Label(pictureFrame, text='保存先フォルダを指定してください')
+        lbl = tk.Label(pictureFrame, bg = self.color, text='保存先フォルダを指定してください')
         lbl.grid(row=3, column=0)
-        lbl = tk.Label(pictureFrame, text='2枚の画像のシフト量を指定してください')
+        lbl = tk.Label(pictureFrame, bg = self.color, text='2枚の画像のシフト量を指定してください')
         lbl.grid(row=4, column=0)
 
 
@@ -84,7 +83,7 @@ class GUI:
         saveEntry.grid(row=0, column=1)
         # タイトルのテキストボックスを出現させる
         titleEntry = tk.Entry(analysisFrame, width=50)  # widthプロパティで大きさを変える
-        titleEntry.insert(tk.END, 'Beam graph')
+        #titleEntry.insert(tk.END, 'Beam graph')
         titleEntry.grid(row=1, column=1)
         # 最大最小のテキストボックスを出現させる
         MaxEntry = tk.Entry(analysisFrame, width=10)  # widthプロパティで大きさを変える
@@ -154,7 +153,8 @@ class GUI:
                         self.save_flag = 1
                     else:
                         pass
-                    data = allread_scanner(fileEntry.get(), None, titleEntry.get(), self.save_flag, saveEntry.get()).lightsource_beamshape_smoothing()
+
+                    data = allread_scanner(fileEntry.get(), None, titleEntry.get(), saveEntry.get(), self.save_flag).lightsource_beamshape_smoothing()
 
                     root = tk.Tk()
                     root.title("graph")  # ウインドのタイトル
@@ -182,6 +182,7 @@ class GUI:
                         self.save_flag = 1
                     else:
                         pass
+
                     data = allread_scanner(fileEntry.get(), None, titleEntry.get(), saveEntry.get(), self.save_flag).visuallization(MinEntry.get(), MaxEntry.get())
                     #messagebox.showinfo('status', '解析，保存が完了しました')
 
@@ -209,6 +210,11 @@ class GUI:
                         self.save_flag = 1
                     else:
                         pass
+                    if len(titleEntry.get()) == 0:
+                        self.titleflag = 1
+                    else:
+                        pass
+
                     data = allread_scanner(fileEntry_2.get(), fileEntry_3.get(), titleEntry.get(), saveEntry_2.get(), self.save_flag).picture_reconstruction(shiftEntry.get())
                     # messagebox.showinfo('status', '解析，保存が完了しました')
 
@@ -247,7 +253,7 @@ class GUI:
         self.savefolderbutton_2_clear = tk.Button(pictureFrame, text='Clear', command=savefolder_button_clear_clicked_2)
         self.savefolderbutton_2_clear.grid(row=3, column=3)
 
-        self.intensity_imaging_button = tk.Button(pictureFrame, text='画像再構成開始', command=picture_reconstruction_clicked)
+        self.intensity_imaging_button = tk.Button(pictureFrame, text='画像再構成開始(保存は上書きされます)', command=picture_reconstruction_clicked)
         self.intensity_imaging_button.grid(row=5, column=1)
 
 class Main:

@@ -8,11 +8,14 @@ from matplotlib.colors import ListedColormap
 
 class allread_scanner:
 
-    def __init__(self,file,file_2,title,save_file,saveflag=0):
+    def __init__(self,file,file_2,title,save_file, saveflag=0):
         self.file = file
         self.file_2 = file_2
         self.file_name = os.path.splitext(os.path.basename(file))[0]
-        self.title = title
+        if len(title) == 0:
+            self.title = self.file_name
+        else:
+            self.title = title
         self.save_file = save_file
         self.save_flag = saveflag
         x = []
@@ -141,6 +144,7 @@ class allread_scanner:
         #ax.imshow()
         if self.save_flag == 0:
             plt.savefig(self.save_file + '/' + 'graph_' + self.file_name + '.png')
+            print('ok')
         else:
             pass
 
